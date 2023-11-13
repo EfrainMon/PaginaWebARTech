@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision - Empresa ARTech</title>
+    <style>
+        body {
+            background-color: #fff;
+            font-family: Arial, sans-serif;
+            color: #000;
+            margin: 0;
+            padding: 0;
+			background-image: url('./img/vision.png');
+			ackground-size: cover; /* Ajusta el tamaño de la imagen */
+            background-position: center center;
+            background-repeat: no-repeat;
+			background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #763e85;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+		nav {
+  background-color: #763e85;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo img {
+  max-width: 10rem; /* Ajusta el tamaño del logotipo según sea necesario */
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  margin-right: 20px; /* Espacio entre elementos de la barra de navegación */
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: #fff; /* Color del texto en la barra de navegación */
+}
+
+/* Estilos para los grids */
+.grid-container,
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: 1fr; /* Hace que los cuadros ocupen toda la pantalla de izquierda a derecha */
+}
+
+/* Estilos para los grids */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Hace que los cuadros ocupen toda la pantalla de izquierda a derecha */
+}
+
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Añade dos columnas para el grid con clase "grid-container-2" */
+}
+
+
+.cuadro-left {
+  background-color: #fff; /* Color de fondo */
+  text-align: center;
+  color: #fff; /* Color del texto */
+  margin: 0; /* Elimina el margen entre los cuadros */
+  grid-column: 1; /* Añade una propiedad para el cuadro de Misión */
+}
+
+.cuadro-right {
+  background-color: #fff; /* Color de fondo */
+  text-align: center;
+  color: #fff; /* Color del texto */
+  margin: 0; /* Elimina el margen entre los cuadros */
+  grid-column: 2; /* Añade una propiedad para el cuadro de Visión */
+}
+
+.cuadro {
+  background-color: #fff;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative; /* Agregar posición relativa */
+}
+
+.cuadro img {
+  max-width: 100%;
+  height: auto;
+}
+
+.texto-centrado {
+  position: absolute; /* Posición absoluta en relación con el contenedor .cuadro */
+  top: 50%; /* Coloca el elemento en el centro vertical */
+  left: 50%; /* Coloca el elemento en el centro horizontal */
+  transform: translate(-50%, -50%); /* Centra el elemento correctamente */
+}
+
+.texto-centrado p {
+  text-align: center; /* Centra el texto horizontalmente */
+  font-size: 5rem; /* Establece el tamaño de fuente deseado */
+  font-weight: bold; /* Establece el peso de la fuente deseado */
+  color: #fff; /* Color del texto */
+  padding: 10px 20px; /* Espaciado del texto */
+  border-radius: 10px; /* Borde redondeado */
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+/* Clase para aplicar el efecto de zoom en hover a la imagen */
+.zoom-on-hover-image {
+  transition: transform 5.0s ease; /* Agrega una transición suave en el efecto */
+}
+
+/* Aplica el zoom en hover solo a la imagen */
+.zoom-on-hover-image:hover {
+  transform: scale(1.1); /* Aumenta el tamaño de la imagen en un 10% (zoom) */
+}
+
+.texto-contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.texto-contenedor p {
+  font-size: 1.5rem; /* Tamaño de fuente deseado */
+  font-weight: bold; /* Peso de fuente deseado */
+  color: #fff; /* Color del texto */
+  margin: 0; /* Elimina el margen predeterminado */
+  padding: 10px; /* Espaciado del texto */
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para hacer que el texto sea legible */
+  border-radius: 10px; /* Borde redondeado */
+  position: absolute; /* Posición absoluta en relación con el contenedor */
+  top: 50%; /* Centra verticalmente */
+  left: 50%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%); /* Centra el texto correctamente */
+  z-index: 1; /* Asegura que el texto esté por encima de la imagen */
+}
+
+.footer-derechos {
+  background-color: #763e85;
+  padding: 10px 20px;
+  text-align: right; /* Alinea el texto a la derecha */
+  color: #fff; /* Color del texto en el footer */
+  font-size: 14px; /* Tamaño de fuente para el footer */
+}
+
+footer {
+            background-color: #763e85;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+		.texto-imagen {
+            color: white;
+			font-size: 1.2rem;
+        }
+		.texto-imagen-tema {
+            color: white;
+			font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+ <nav>
+    <div class="logo">
+      <img src="ArTechLogo.png" alt="Logo de la empresa">
+    </div>
+    <div class="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <ul class="menu">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Contacto</a></li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Nosotros</a></li>
+    </ul>
+  </nav>
+    <div class="container">
+        <h1 class="texto-imagen-tema">Vision</h1>
+        <div class="">
+            <p class="texto-imagen">Posicionarnos como primera opción en el ámbito de la consultoría y desarrollo de aplicaciones, partiendo hacia un futuro en el que nuestras soluciones no solo satisfagan sino superen las expectativas de nuestros clientes, decididos a establecer un estándar en el que las soluciones de la empresa sean sinónimo de excelencia y vanguardia.
+</p>
+            <p></p>
+        </div>
+    </div>
+	
+<footer>
+  <p><p>
+  <p class="footer-derechos">&copy; Derechos Reservados ARTech 2023.</p>
+</footer>
+</html>
