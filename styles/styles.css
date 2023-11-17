@@ -1,10 +1,9 @@
-
 /* Estilos para el body */
 body {
-  margin: 0; /* Elimina el margen exterior predeterminado */
-  padding: 0; /* Elimina el relleno predeterminado */
-  font-family: 'Satoshi', sans-serif; /* Fuente predeterminada */
-  background-color: #fff; /* Color de fondo de la página */
+  margin: 0;
+  padding: 0;
+  font-family: 'Satoshi', sans-serif;
+  background-color: #fff;
 }
 
 /* Estilos para la barra de navegación */
@@ -17,7 +16,7 @@ nav {
 }
 
 .logo img {
-  max-width: 10rem; /* Ajusta el tamaño del logotipo según sea necesario */
+  max-width: 10rem;
 }
 
 ul {
@@ -28,91 +27,76 @@ ul {
 
 li {
   display: inline;
-  margin-right: 20px; /* Espacio entre elementos de la barra de navegación */
+  margin-right: 20px;
   font-size: 1.15rem;
   font-weight: 400;
 }
 
 a {
   text-decoration: none;
-  color: #fff; /* Color del texto en la barra de navegación */
+  color: #fff;
+}
+
+/* Ajustes específicos para los cuadros de abajo */
+.grid-container .cuadro {
+  margin-bottom: 0; /* Ajusta el margen inferior a 0 */
 }
 
 /* Estilos para los grids */
 .grid-container,
 .grid-container-2 {
   display: grid;
-  grid-template-columns: 1fr; /* Hace que los cuadros ocupen toda la pantalla de izquierda a derecha */
-}
-
-/* Estilos para los grids */
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr; /* Hace que los cuadros ocupen toda la pantalla de izquierda a derecha */
+  grid-template-columns: 1fr;
+  grid-row-gap: 0; /* Elimina el espacio entre las filas */
+  width: 100%;
 }
 
 .grid-container-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Añade dos columnas para el grid con clase "grid-container-2" */
+  grid-template-columns: 1fr 1fr;
 }
 
-
-.cuadro-left {
-  background-color: #fff; /* Color de fondo */
-  text-align: center;
-  color: #fff; /* Color del texto */
-  margin: 0; /* Elimina el margen entre los cuadros */
-  grid-column: 1; /* Añade una propiedad para el cuadro de Misión */
-}
-
-.cuadro-right {
-  background-color: #fff; /* Color de fondo */
-  text-align: center;
-  color: #fff; /* Color del texto */
-  margin: 0; /* Elimina el margen entre los cuadros */
-  grid-column: 2; /* Añade una propiedad para el cuadro de Visión */
-}
-
+.cuadro-left,
+.cuadro-right,
 .cuadro {
   background-color: #fff;
   text-align: center;
   color: #fff;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative; /* Agregar posición relativa */
+  position: relative;
+  overflow: hidden; /* Evita que las imágenes sobresalgan del cuadro */
 }
 
 .cuadro img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  transition: transform 0.5s ease;
 }
 
 .texto-centrado {
-  position: absolute; /* Posición absoluta en relación con el contenedor .cuadro */
-  top: 50%; /* Coloca el elemento en el centro vertical */
-  left: 50%; /* Coloca el elemento en el centro horizontal */
-  transform: translate(-50%, -50%); /* Centra el elemento correctamente */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .texto-centrado p {
-  text-align: center; /* Centra el texto horizontalmente */
-  font-size: 5rem; /* Establece el tamaño de fuente deseado */
-  font-weight: bold; /* Establece el peso de la fuente deseado */
-  color: #fff; /* Color del texto */
-  padding: 10px 20px; /* Espaciado del texto */
-  border-radius: 10px; /* Borde redondeado */
+  text-align: center;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 }
+
 /* Clase para aplicar el efecto de zoom en hover a la imagen */
 .zoom-on-hover-image {
-  transition: transform 5.0s ease; /* Agrega una transición suave en el efecto */
+  transition: transform 0.5s ease;
 }
 
 /* Aplica el zoom en hover solo a la imagen */
 .zoom-on-hover-image:hover {
-  transform: scale(1.1); /* Aumenta el tamaño de la imagen en un 10% (zoom) */
+  transform: scale(1.1);
 }
 
 .texto-contenedor {
@@ -125,29 +109,43 @@ a {
 }
 
 .texto-contenedor p {
-  font-size: 1.5rem; /* Tamaño de fuente deseado */
-  font-weight: bold; /* Peso de fuente deseado */
-  color: #fff; /* Color del texto */
-  margin: 0; /* Elimina el margen predeterminado */
-  padding: 10px; /* Espaciado del texto */
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para hacer que el texto sea legible */
-  border-radius: 10px; /* Borde redondeado */
-  position: absolute; /* Posición absoluta en relación con el contenedor */
-  top: 50%; /* Centra verticalmente */
-  left: 50%; /* Centra horizontalmente */
-  transform: translate(-50%, -50%); /* Centra el texto correctamente */
-  z-index: 1; /* Asegura que el texto esté por encima de la imagen */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* Alineación específica para los cuadros de abajo */
+.grid-container .cuadro,
+.grid-container-2 .cuadro {
+  margin-top: 20px;
+}
+
+/* Títulos específicos para los cuadros de abajo */
+.cuadro:nth-child(3) .texto-centrado p {
+  content: "Sobre Nosotros";
+}
+
+.cuadro:nth-child(4) .texto-centrado p {
+  content: "Nuestros Proyectos";
+}
+
+.cuadro:nth-child(5) .texto-centrado p {
+  content: "Contacto";
 }
 
 .footer-derechos {
   background-color: #763e85;
   padding: 10px 20px;
-  text-align: right; /* Alinea el texto a la derecha */
-  color: #fff; /* Color del texto en el footer */
-  font-size: 14px; /* Tamaño de fuente para el footer */
+  text-align: right;
+  color: #fff;
+  font-size: 14px;
 }
-
-
-
-
-
