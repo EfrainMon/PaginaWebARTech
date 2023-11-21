@@ -2,14 +2,13 @@
 <html lang="es">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="/styles/styles.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Satoshi&display=swap">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Misión - Empresa ARTech</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Enlaza tu archivo styles.css -->
   <style>
     body {
-      background-image: url('./img/mision.jpg');
+      background-image: url('./img/misionfondo.png');
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
@@ -48,12 +47,12 @@
       text-decoration: none;
       color: #fff;
       position: relative;
-      transition: color 0.3s ease, background-color 0.3s ease;
+      transition: color 0.3s ease, background-color 0.3s ease; /* Agrega transición al color del texto y al fondo blanco */
     }
 
     li a:hover {
       color: #8e44ad;
-      background-color: rgba(255, 255, 255, 0.2);
+      background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad del fondo blanco al hacer hover */
     }
 
     .container {
@@ -93,13 +92,24 @@
       color: #fff;
       font-size: 14px;
     }
+
+    .mision-texto {
+    color: black; /* Reemplaza "tu-color-deseado" con el color que desees */
+  }
+
+  .misionP-texto {
+    color: #763e85; /* Reemplaza "tu-color-deseado" con el color que desees */
+  }
+
   </style>
 </head>
 
 <body>
   <nav>
     <div class="logo">
-      <img src="./img/ArTechLogo.png" alt="Logo de la empresa">
+      <a href="index.html">
+        <img src="./img/ArTechLogo.png" alt="Logo de la empresa">
+    </a>
     </div>
     <div class="menu-toggle">
       <div class="bar"></div>
@@ -109,14 +119,15 @@
     <ul class="menu">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="contacto.html">Contacto</a></li>
-      <li><a href="servicios.html">Servicios</a></li>
-      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="nuestros-proyectos.html">Servicios</a></li>
+      <li><a href="sobre-nosotros.html">Nosotros</a></li>
     </ul>
   </nav>
   <div class="container">
-    <h1 class="texto-imagen-tema">Misión</h1>
+    <h1 class="texto-imagen-tema misionP-texto">Misión</h1>
     <div class="">
-      <p class="texto-imagen">Ser la consultora líder en el desarrollo a medida de aplicaciones, brindando soluciones personalizadas y asesoramiento experto que atiendan de manera precisa las necesidades de cada cliente. Estamos comprometidos en transformar la visión de nuestros clientes en soluciones tangibles que marquen la pauta en el campo de la realidad aumentada.</p>
+      <p class="texto-imagen mision-texto">Ser la consultora líder en el desarrollo a medida de aplicaciones, brindando soluciones personalizadas y asesoramiento experto que atiendan de manera precisa las necesidades de cada cliente. Estamos comprometidos en transformar la visión de nuestros clientes en soluciones tangibles que marquen la pauta en el campo de la realidad aumentada.</p>
+      </p>
       <p></p>
     </div>
   </div>
